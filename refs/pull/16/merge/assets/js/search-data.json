@@ -2,31 +2,31 @@
     "doc": "D Summer School",
     "title": "D Summer School",
     "content": " ",
-    "url": "/",
+    "url": "https://edi33416.github.io/DSS-gh-pages/refs/pull/16/merge/",
     "relUrl": "/"
   },"1": {
     "doc": "D Summer School",
     "title": "Write fast. Read fast. Run fast.",
     "content": "“D is a multi-paradigm system programming language that combines a wide range of powerful programming concepts from the lowest to the highest levels. It emphasizes memory safety, program correctness, and pragmatism.” - Ali Çehreli, Programming in D, 2018 . Welcome to the D Summer School (DSS)! This repository contains information available to the participants to the D Summer School: session text, tutorials, quizzes, exercises. Apart from DSS participants, you can use this content by yourself to learn more about the D programming language. ",
-    "url": "/#write-fast-read-fast-run-fast",
+    "url": "https://edi33416.github.io/DSS-gh-pages/refs/pull/16/merge/#write-fast-read-fast-run-fast",
     "relUrl": "/#write-fast-read-fast-run-fast"
   },"2": {
     "doc": "D Summer School",
     "title": "Summary",
     "content": "The aim of the program is to introduce students to the basics of the D programming language, by offering insights on key idioms and focusing on modern programming techniques. Activities will take place during three intensive training sessions per week. These sessions will enable students to contribute to the language and submit bug-fixing PRs to core D language repositories. In the final week of the summer school we’ll strongly encourage students to begin working at a bug-fix for one of the bootcamp issues posted on the bug tracker. The final day of the program will be marked by a hackathon where efforts will be concentrated on delivering PRs to upstream. Prizes will be awarded! . ",
-    "url": "/#summary",
+    "url": "https://edi33416.github.io/DSS-gh-pages/refs/pull/16/merge/#summary",
     "relUrl": "/#summary"
   },"3": {
     "doc": "D Summer School",
     "title": "Sessions",
     "content": ". | Introduction to D | Introduction to Meta-Programming | Memory Safety | Advanced Classes and Structs | Functional D | Design by Introspection | Memory Management | C/C++ Interoperability and Tooling | . ",
-    "url": "/#sessions",
+    "url": "https://edi33416.github.io/DSS-gh-pages/refs/pull/16/merge/#sessions",
     "relUrl": "/#sessions"
   },"4": {
     "doc": "D Summer School",
     "title": "Contributing",
     "content": "Contributions are welcome. See the contribution guide on how you could report or fix issues and on how you can improve the content. Reviewers are requested to follow the reviewing guide. ",
-    "url": "/#contributing",
+    "url": "https://edi33416.github.io/DSS-gh-pages/refs/pull/16/merge/#contributing",
     "relUrl": "/#contributing"
   }
 }
