@@ -5,3 +5,4 @@ plugins:
   - jekyll-seo-tag
 
 exclude: ["Gemfile", "Dockerfile", "refs/"]
+include: ["refs/pull/16/merge"]
