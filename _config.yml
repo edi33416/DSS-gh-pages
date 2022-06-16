@@ -3,5 +3,5 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-titles-from-headings
   - jekyll-seo-tag
-baseurl: "refs/pull/15/merge"
+baseurl: "/refs/pull/15/merge"
 url: "https://edi33416.github.io/DSS-gh-pages"
