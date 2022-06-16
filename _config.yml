@@ -1,7 +1,0 @@
-theme: just-the-docs
-
-plugins:
-  - jekyll-titles-from-headings
-  - jekyll-seo-tag
-baseurl: "/refs/pull/16/merge"
-url: "https://edi33416.github.io/dss-gh-pages"
