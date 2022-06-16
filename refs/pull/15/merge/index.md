@@ -1,3 +1,6 @@
+---
+nav_order: 1
+---
 # D Summer School
 
 ## Write fast. Read fast. Run fast.
