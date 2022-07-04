@@ -13,7 +13,7 @@
           <input type="radio" name="radio-choices">
         </td>
         <td class="choice-text">{{ choice | markdownify}}</td>
-        <td class="choice-feedback d-none">{{ include.feedback[forloop.index0] | markdownify }}</td>
+        <td class="choice-feedback"><span class="d-none text-muted">{{ include.feedback[forloop.index0] | markdownify }}</span></td>
       </tr>
       {% endfor %}
     </tbody>
@@ -23,7 +23,6 @@
   </div>
   <div class="text-center" style="padding: 5px;">
     <button class="check btn btn-primary" onClick="(function (btn){
-                      console.log("Clicked Check");
                       answerIndex = {{include.answer}};
                       feedback = btn.parentNode.previousElementSibling
                       feedbackMsg = feedback.firstElementChild;
@@ -36,7 +35,7 @@
                         if (radio.checked) {
                           msg = choices[i].lastElementChild.firstElementChild;
                           msg.classList.remove('d-none');
-                          panel.classList.remove('panel-primary');
+                          panel.classList.remove('paenl-primary');
                           if (i === answerIndex) {
                             panel.classList.add('panel-success');
                             feedbackMsg.classList.remove('d-none');
@@ -51,7 +50,6 @@
       Check Answer
     </button>
     <button class="reset btn btn-default" onClick="(function (btn){
-                      console.log("Clicked Reset");
                       feedback = btn.parentNode.previousElementSibling
                       feedbackMsg = feedback.firstElementChild;
                       feedbackMsg.classList.add('d-none');
