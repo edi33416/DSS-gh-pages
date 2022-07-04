@@ -23,54 +23,12 @@
   </div>
   <div class="text-center" style="padding: 5px;">
     <button class="check btn btn-primary" onclick="(function (btn){
-                      answerIndex = {{include.answer}};
-                      feedback = btn.parentNode.previousElementSibling
-                      feedbackMsg = feedback.firstElementChild;
-                      choices = feedback.previousElementSibling.firstElementChild.children;
-                      pBody = feedback.previousElementSibling.previousElementSibling;
-                      panel = pBody.parentNode;
-                      for (i=0; i<choices.length; i++){
-                        radio = choices[i].firstElementChild.firstElementChild;
-                        radio.setAttribute('disabled', true);
-                        if (radio.checked) {
-                          msg = choices[i].lastElementChild.firstElementChild;
-                          msg.classList.remove('d-none');
-                          panel.classList.remove('paenl-primary');
-                          if (i === answerIndex) {
-                            panel.classList.add('panel-success');
-                            feedbackMsg.classList.remove('d-none');
-                          } else {
-                            panel.classList.add('panel-danger');
-                          }
-                        }
-                      }
-                      btn.classList.add('disabled');
-                      //btn.setAttribute('disabled', true);
+                      console.log('Clicked check');
                    }(this))">
       Check Answer
     </button>
     <button class="reset btn btn-default" onclick="(function (btn){
-                      feedback = btn.parentNode.previousElementSibling
-                      feedbackMsg = feedback.firstElementChild;
-                      feedbackMsg.classList.add('d-none');
-                      choices = feedback.previousElementSibling.firstElementChild.children;
-                      pBody = feedback.previousElementSibling.previousElementSibling;
-                      panel = pBody.parentNode;
-                      panel.classList.remove('panel-success');
-                      panel.classList.remove('panel-danger');
-                      panel.classList.add('panel-primary');
-                      for (i=0; i<choices.length; i++){
-                        radio = choices[i].firstElementChild.firstElementChild;
-                        radio.checked = false;
-                        radio.removeAttribute('disabled');
-                        msg = choices[i].lastElementChild.firstElementChild;
-                        msg.classList.add('d-none');
-                        text = feedback.previousElementSibling;
-                        text.classList.remove('text-success');
-                        text.classList.remove('text-danger');
-                      }
-                      btn.previousElementSibling.classList.remove('disabled');
-                      //btn.previousElementSibling.removeAttribute('disabled');
+                      console.log('Clicked reset');
                    }(this))">Try Again</button>
   </div>
 </div>
