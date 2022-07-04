@@ -24,6 +24,24 @@
   <div class="text-center" style="padding: 5px;">
     <button class="check btn btn-primary" onclick="(function (btn){
                       console.log('Clicked check');
+                      answerIndex = {{include.answer}};
+                      choices = $('.choices tbody').children;
+                      feedback = $('.feedback span')
+                      for (i = 0; i < choices.length; i++) {
+                        radio = choices[i].firstElementChild.firstElementChild;
+                        if (radio.checked) {
+                          if (i === answerIndex) {
+                            feedback.classList.remove('d-none');
+                            choices[i].classList.add('alert');
+                            choices[i].classList.add('alert-success');
+                          }
+                          else {
+                            choices[i].classList.add('alert');
+                            choices[i].classList.add('alert-danger');
+                            choices[i].lastElementChild.lastElementChild.classList.remove('d-none')
+                          }
+                        }
+                      }
                    }(this))">
       Check Answer
     </button>
