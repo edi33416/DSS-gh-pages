@@ -25,13 +25,11 @@
     <button class="check btn btn-primary" onclick="(function (btn){
                       console.log('Clicked check');
                       answerIndex = {{include.answer}};
-                      choices = $('.choices tbody').children;
-                      feedback = $('.feedback span');
+                      choices = document.getElementsByClassName('choice');
                       for (i = 0; i < choices.length; i++) {
                         radio = choices[i].firstElementChild.firstElementChild;
                         if (radio.checked) {
                           if (i === answerIndex) {
-                            feedback.classList.remove('d-none');
                             choices[i].classList.add('alert');
                             choices[i].classList.add('alert-success');
                           }
@@ -49,10 +47,7 @@
                       console.log('Clicked reset');
                       answerIndex = {{include.answer}};
 
-                      feedback = $('.feedback span')
-                      feedback.classList.add('d-none');
-
-                      choices = $('.choices tbody').children;
+                      choices = document.getElementsByClassName('choice');
                       for (i = 0; i < choices.length; i++) {
                         radio = choices[i].firstElementChild.firstElementChild;
                         choices[i].classList.remove('alert-success');
