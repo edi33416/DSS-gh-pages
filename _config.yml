@@ -3,6 +3,4 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-titles-from-headings
   - jekyll-seo-tag
-
-exclude: ["Gemfile", "Dockerfile", "refs/"]
-include: ["refs/pull/16/merge"]
+url: "https://edi33416.github.io/DSS-gh-pages"
