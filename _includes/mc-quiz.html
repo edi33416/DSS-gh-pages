@@ -22,7 +22,8 @@
     <span class="success-msg lead text-success d-none">You have successfully completed this question!</span>
   </div>
   <div class="text-center" style="padding: 5px;">
-    <button class="check btn btn-primary" onClick="(function (btn){
+    <button class="check btn btn-primary" onclick="(function (btn){
+                      console.log("Clicked check");
                       answerIndex = {{include.answer}};
                       feedback = btn.parentNode.previousElementSibling
                       feedbackMsg = feedback.firstElementChild;
@@ -49,7 +50,8 @@
                    }(this))">
       Check Answer
     </button>
-    <button class="reset btn btn-default" onClick="(function (btn){
+    <button class="reset btn btn-default" onclick="(function (btn){
+                      console.log("Clicked reset");
                       feedback = btn.parentNode.previousElementSibling
                       feedbackMsg = feedback.firstElementChild;
                       feedbackMsg.classList.add('d-none');
