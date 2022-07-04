@@ -1,3 +1,6 @@
+---
+nav_exclude: true
+---
 ## Question Text
 
 Why, for the previous example, the lengths of a and b are different?
