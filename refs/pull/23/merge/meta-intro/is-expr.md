@@ -148,9 +148,3 @@ void main()
     fun(2, 2.0);
 }
 ```
-
-2. Follow this [link](https://github.com/dlang/phobos/blob/master/std/algorithm/sorting.d#L317).
-   That is the official D language standard library implementation of the `ordered` function.
-   Read the documentation and the unittests, then try to understand the implementation.
-   This is how real life meta-programming looks like.
-   Ask the [lab rats](http://ocw.cs.pub.ro/courses/dss?&#team) about clarifications on any misunderstandings.

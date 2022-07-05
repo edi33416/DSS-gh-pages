@@ -58,9 +58,14 @@ Template constraints have the same syntax as an if statement (without else).
 
 ## Practice
 
-Implement a generic partitioning search algorithm.
- 
+1. Implement a generic partitioning search algorithm.
   * The algorithm will receive an array/associative array and an element and returns the number of elements that are lesser than the element in the array/associative array list of keys.
   * The element type may be struct, class or builtin type.
   * Use templated function(s) and `template constraints` or `static if`s to implement the various cases.
   * Use these [helper traits](https://dlang.org/phobos/std_traits.html).
+
+2. Follow this [link](https://github.com/dlang/phobos/blob/master/std/algorithm/sorting.d#L317).
+   That is the official D language standard library implementation of the `ordered` function.
+   Read the documentation and the unittests, then try to understand the implementation.
+   This is how real life meta-programming looks like.
+   Ask the [lab rats](http://ocw.cs.pub.ro/courses/dss?&#team) about clarifications on any misunderstandings.

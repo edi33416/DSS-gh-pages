@@ -32,7 +32,7 @@ Manifest constants can be seen as compile time variable declarations.
 
 ## Practice
 
-1. Go to this [[https://godbolt.org/z/0RGPvB|link]].
+1. Go to this [link](https://godbolt.org/z/0RGPvB).
 You will find the disassembly of a code.
 Observe how the call to function `sum` is translated in assembly code.
 Explain the output.

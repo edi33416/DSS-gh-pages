@@ -129,7 +129,7 @@ The output of the program is produced by those different instantiations of the f
 (hello)
 ```
 
-#### Practice
+### Practice
 
 Inspect the snippet below and try to understand what happens.
 What does the code do?
