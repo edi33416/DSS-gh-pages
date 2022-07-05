@@ -129,6 +129,42 @@ The output of the program is produced by those different instantiations of the f
 (hello)
 ```
 
+#### Practice
+
+Inspect the snippet below and try to understand what happens.
+What does the code do?
+How many instances of the `printArguments` function are created?
+
+```d
+void printArguments(T...)(T t)
+{
+    static if(T.length == 0)
+        return;
+    else
+    {
+        import std.stdio : writeln;
+        writeln(t[0]);
+        printArguments(t[1 .. $]);
+    }
+}
+
+struct MyClass
+{
+    string toString() const
+    {
+         return "MyClass Type";
+    }
+}
+
+void main()
+{
+    printArguments!(int, string, MyClass)(2, "aha", MyClass());
+}
+
+```
+
+**Hint**: Use `pragma(msg)` to inspect the instantiation type(s).
+
 ### More than one template parameter
 
 Let's change the function template to take the parentheses characters as well:

@@ -4,6 +4,15 @@ parent: Introduction to Meta-Programming
 nav_order: 5
 ---
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # is Expression
 
 ```d
@@ -117,3 +126,31 @@ For that reason, now the condition is invalid for both `AlarmClock` and `int`.
 
 These are the simplest uses of the is expression.
 For an exhaustive guide to all the variations of is expression check this [link](https://dlang.org/spec/expression.html#is_expression).
+
+### Practice
+
+1. Inspect and compile the code snippet below.
+What happens and why?
+Solve the issue.
+
+```d
+T fun(T)(int a, T b)
+{
+    static if(is(typeof(A) : int))
+        return b;
+    else
+        return a;
+}
+
+void main()
+{
+    fun(2, "hello");
+    fun(2, 2.0);
+}
+```
+
+2. Follow this [link](https://github.com/dlang/phobos/blob/master/std/algorithm/sorting.d#L317).
+   That is the official D language standard library implementation of the `ordered` function.
+   Read the documentation and the unittests, then try to understand the implementation.
+   This is how real life meta-programming looks like.
+   Ask the [lab rats](http://ocw.cs.pub.ro/courses/dss?&#team) about clarifications on any misunderstandings.

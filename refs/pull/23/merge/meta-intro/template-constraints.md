@@ -55,3 +55,12 @@ void main()
 ```
 
 Template constraints have the same syntax as an if statement (without else).
+
+## Practice
+
+Implement a generic partitioning search algorithm.
+ 
+  * The algorithm will receive an array/associative array and an element and returns the number of elements that are lesser than the element in the array/associative array list of keys.
+  * The element type may be struct, class or builtin type.
+  * Use templated function(s) and `template constraints` or `static if`s to implement the various cases.
+  * Use these [helper traits](https://dlang.org/phobos/std_traits.html).

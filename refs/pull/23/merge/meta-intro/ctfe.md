@@ -25,8 +25,26 @@ void main()
 }
 ```
 
-In the above example, **sum(a, b)** is evaluated at compile time.
-In the object file, no call to **sum** is issued.
+In the above example, `sum(a, b)` is evaluated at compile time.
+In the object file, no call to `sum` is issued.
 
 TODO: quiz
-> :warning: If the type of **a** or **b** is changed to **int**, the compiler will issue an error. Why?
+> :warning: If the type of `a` or `b` is changed to `int`, the compiler will issue an error. Why?
+
+## Practice
+
+Pragmas are compile time instructions used to pass or ask the compiler for specific information.
+`pragma(msg)` is used as a compile time debugging tool that allows printing of compile time known variables:
+
+```d
+class Foo {}
+Foo a;
+enum b = 2;
+pragma(msg, "hello");     // prints "hello" at compile time
+pragma(msg, Foo);         // prints Foo at compile time
+pragma(msg, a);           // error, a cannot be read at compile time
+pragma(msg, typeof(a));   // prints Foo at compile time
+pragma(msg, b);           // prints 2 at compile time
+```
+
+Use `pragma(msg)` inside the code snippet above to observe the output when compiling the code.
