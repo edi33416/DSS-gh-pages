@@ -62,10 +62,12 @@ The "in" expression yields a pointer to the value if the key is in the associati
 For more advanced operations on AAs check this [link](https://dlang.org/spec/hash-map.html#construction_assignment_entries).
 For an exhaustive list of the AA properties check this [link](https://dlang.org/spec/hash-map.html#properties).
 
-**Practice:** Find the [majority element](https://leetcode.com/problems/majority-element/) in a string array using builtin associative arrays.
+### Practice
+
+1. Find the [majority element](https://leetcode.com/problems/majority-element/) in a string array using builtin associative arrays.
 You can start your implementation using the skeleton inside `practice/majority-element` directory.
 
-**Practice:** Go to this [link](https://github.com/TheAlgorithms/C/tree/master/searching).
+2. Go to this [link](https://github.com/TheAlgorithms/C/tree/master/searching).
 You will find a series of searching algorithms, each implemented in C in its own file.
 - Choose one algorithm and port it to D with minimum modifications.
 - Update the code using D specific features to improve the code (fewer lines of code, increase in expressiveness etc.).

@@ -97,7 +97,9 @@ When adjusting the length of a dynamic array there are 2 possibilities:
 1. The resized array does not interfere with other data, so it is resized in place.
 For more information click [here](https://dlang.org/spec/arrays.html#resize).
 
-**Practice**: Navigate to the `demo/slice` directory.
+### Practice
+
+Navigate to the `demo/slice` directory.
 Inspect and run the file `slice.d`.
 What happened here? Why?
 
@@ -143,7 +145,9 @@ int main()
 
 As you can see, the resulting code is much more expressive and fewer lines of code were utilized.
 
-**Practice:** Navigate to `practice/array-median` directory.
+### Practice
+
+Navigate to `../../Introduction\ to\ D/practice/array-median` directory.
 Open and inspect the file `arrayMedian.d`.
 For this exercise, please add your solution inside the `medianElem` function.
 

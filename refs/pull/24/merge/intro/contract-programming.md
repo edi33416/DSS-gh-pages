@@ -51,7 +51,9 @@ The expressions in the first are lowered to contract blocks that look almost exa
 
 To test your knwoledge, answer this [quiz](./quiz/function-overloading.md)
 
-**Practice:** Navigate to the `practice/distribute-sum` directory.
+### Practice
+
+Navigate to the `practice/distribute-sum` directory.
 Inspect the source file distribute.d and follow the instructions.
 
 - Complete the `distribute` function.
@@ -90,7 +92,9 @@ For public or exported functions, the order of execution is:
 1. invariant
 1. postconditions
 
-**Practice:** Navigate to `practice/my-associative-array` directory.
+### Practice
+
+Navigate to `practice/my-associative-array` directory.
 Follow the directions in the skeleton in order to implement our very own `string : int` associative array.
 
 For the purpose of this exercise and lab, we suggest implementing the associative array using vectors.

@@ -20,7 +20,9 @@ When a class is passed as an argument to an lvalue function parameter, the funct
 
 Both **structs** and **classes** will be covered more in depth in a further lab.
 
-**Practice:** Navigate to the `demo/struct-class` directory.
+## Practice
+
+1. Navigate to the `demo/struct-class` directory.
 You will find 2 files implementing the same program.
 One uses a struct as a data container, while the other uses a class.
 
@@ -33,7 +35,7 @@ To test your knwoledge answer the following quizzes:
 
 [Quiz 2](./quiz/struct-class-output.md)
 
-**Practice:** Navigate to the `demo/ref-vs-value` directory.
+2. Navigate to the `demo/ref-vs-value` directory.
 Inspect the file and run the code.
 Now let's see how arrays behave as function parameters.
 The next quiz can be tricky but it will help us better understand how arrays work.

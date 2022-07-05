@@ -24,7 +24,9 @@ import std.range : chain, dropOne, front, retro;
 
 ```
 
-**Practice:** Let's go back to the `practice/array-median` directory.
+### Practice
+
+Let's go back to the `practice/array-median` directory.
 This time we want to find the [median element](https://www.geeksforgeeks.org/median/) using functions from the [std.algorithm](https://dlang.org/phobos/std_algorithm.html) package.
 Use UFCS for an increase in expressiveness.
 Observe the increase in performance achieved by using functions from the standard library
@@ -86,7 +88,9 @@ void main()
 Auto functions have their return type inferred based on the type of the return statements.
 Auto can be also used to infer the type of a variable declaration.
 
-**Practice:** Navigate to the `practice/voldemort` directory.
+### Practice
+
+Navigate to the `practice/voldemort` directory.
 `Result` is a struct declared inside `fun`'s scope.
 However we want to be able to use it in `main` as well.
 Inspect the file.

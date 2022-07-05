@@ -37,7 +37,9 @@ struct Sum
 }
 ```
 
-**Practice:** Navigate to the `demo/binary-search` directory.
+## Practice
+
+Navigate to the `demo/binary-search` directory.
 Inspect the source file binarySearch.d.
 As the name implies, a binarySearch algorithm is implemented on integers.
 Compile and run the file.
