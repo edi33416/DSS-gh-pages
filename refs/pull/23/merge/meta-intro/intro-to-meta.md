@@ -37,7 +37,7 @@ Manifest constants can be seen as compile time variable declarations.
 CTFE is a mechanism which allows the compiler to execute functions at compile time.
 There is no special set of the D language necessary to use this feature - whenever a function just depends on compile time known values the D compiler might decide to interpret it during compilation.
 
-Keywords like [static](https://dlang.org/spec/attribute.html#static), [ immutable](https://dlang.org/spec/attribute.html#immutable) or [enum](https://dlang.org/spec/enum.html#manifest_constants) instruct the compiler to use CTFE whenever possible.
+Keywords like [static](https://dlang.org/spec/attribute.html#static), [ immutable](https://dlang.org/spec/attribute.html#immutable) or [enum](https://dlang.org/spec/enum.html#manifest_constants) instruct the compiler to use CTFE.
 
 ```d
 int sum(int a, int b)
