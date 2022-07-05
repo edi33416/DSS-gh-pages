@@ -7,4 +7,3 @@ has_children: true
 
 During this lab you will be introduced to the basic concepts of meta-programming: compile time execution and templates.
 
-

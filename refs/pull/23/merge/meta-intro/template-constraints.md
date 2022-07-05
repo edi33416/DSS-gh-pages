@@ -4,7 +4,7 @@ parent: Introduction to Meta-Programming
 nav_order: 7
 ---
 
-## Template Constraints
+# Template Constraints
 
 The fact that templates can be instantiated with any argument yet not every argument is compatible with every template brings an inconvenience.
 If a template argument is not compatible with a particular template, the incompatibility is necessarily detected during the compilation of the template code for that argument.

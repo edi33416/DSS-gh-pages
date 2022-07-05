@@ -4,7 +4,7 @@ parent: Introduction to Meta-Programming
 nav_order: 5
 ---
 
-## is Expression
+# is Expression
 
 ```d
 is (/* ... */) // is expression
@@ -16,7 +16,7 @@ Although the expression that it takes is not a logical expression, the is expres
 It is especially useful in static if conditionals and template constraints.
 The condition that it takes is always about types, which must be written in one of several syntaxes.
 
-### 1. `is(T)`
+## 1. `is(T)`
 
 The expression `is(T)` Determines whether `T` is a valid type.
 
@@ -32,7 +32,7 @@ static if(is (asd))      // if asd is not a user defined type, the check will fa
 }
 ```
 
-### 2. `is(T Alias)`
+## 2. `is(T Alias)`
 
 The `is(T Alias)` expression works in the same way as the previous syntax: it checks if `T` is a valid type.
 Additionally, it defines `Alias` as an alias of `T`:
@@ -49,7 +49,7 @@ else
 }
 ```
 
-### 3. `is(T : OtherT)`
+## 3. `is(T : OtherT)`
 
 The `is(T : OtherT)` expression determines whether `T` can automatically be converted to `OtherT`.
 It is used to detect automatic type conversions:
@@ -89,12 +89,12 @@ void main()
 }
 ```
 
-### 4. `is(T Alias : OtherT)`
+## 4. `is(T Alias : OtherT)`
 
 The `is(T Alias : OtherT)` expression works in the same way as the previous syntax.
 It checks is `T` can be implicitly converted to `OtherT` and it defines `Alias` as an alias of `T`.
 
-### 5. `is(T == Specifier)`
+## 5. `is(T == Specifier)`
 
 The `is(T == Specifier)` expression determines whether `T` is the same type as `Specifier` or whether `T` matches that specifier.
 

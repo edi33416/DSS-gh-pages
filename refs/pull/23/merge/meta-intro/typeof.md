@@ -4,7 +4,7 @@ parent: Introduction to Meta-Programming
 nav_order: 6
 ---
 
-## Typeof
+# Typeof
 
 `typeof` is a way to specify a type based on the type of an expression.
 For example:

@@ -4,7 +4,7 @@ parent: Introduction to Meta-Programming
 nav_order: 4
 ---
 
-## Static If
+# Static If
 
 `static if` is the compile time equivalent of the `if` statement.
 Just like the `if` statement, `static if` takes a logical expression and evaluates it.

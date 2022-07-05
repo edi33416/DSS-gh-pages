@@ -3,7 +3,7 @@ title: Manifest Constants
 parent: Introduction to Meta-Programming
 nav_order: 1
 ---
-## Manifest Constants
+# Manifest Constants
 
 Manifest constants are variables evaluated at compile time.
 They cannot change their value.

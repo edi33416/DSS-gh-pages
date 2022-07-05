@@ -4,7 +4,16 @@ parent: Introduction to Meta-Programming
 nav_order: 3
 ---
 
-## Templates
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+# Templates
 
 Templates are the feature that allows describing the code as a pattern, for the compiler to generate program code automatically.
 Parts of the source code may be left to the compiler to be filled in until that part is actually used in the program.
@@ -47,7 +56,7 @@ For example, the binary search algorithm is independent of the type of the eleme
 Similarly, the linked list data structure is independent of the type of the elements: linked list is merely about how the elements are stored in the container, regardless of their type.
 Templates are useful in such situations: once a piece of code is described as a template, the compiler generates overloads of the same code automatically according to the actual uses of that code in the program.
 
-### Function templates
+## Function templates
 
 Defining a function as a template is leaving one or more of the types that it uses as unspecified, to be deduced later by the compiler.
 The types that are being left unspecified are defined within the template parameter list, which comes between the name of the function and the function parameter list.
@@ -92,9 +101,9 @@ The compiler considers all of the uses of `printInParens()` in the program and g
 The program is then compiled as if the function has been overloaded explicitly for `int`, `double`, and `MyStruct`:
 
 ```d
-/* Note: These functions are not part of the source
- *  code. They are the equivalents of the functions that
- * the compiler would automatically generate.
+/* Note: These functions are not part of the source code.
+ * They are the equivalents of the functions that the compiler
+ * would automatically generate.
  */
 void printInParens(int value)
 {
@@ -120,7 +129,7 @@ The output of the program is produced by those different instantiations of the f
 (hello)
 ```
 
-#### More than one template parameter
+### More than one template parameter
 
 Let's change the function template to take the parentheses characters as well:
 
@@ -170,7 +179,7 @@ Output:
 
 The flexibility of `printInParens()` has been increased, as it now works correctly for any combination of `T` and `ParensType` as long as those types are printable with `writeln()`.
 
-#### Type deduction
+### Type deduction
 
 The compiler's deciding on what type to use for a template parameter is called type deduction.
 
@@ -181,7 +190,7 @@ Continuing from the last example above, the compiler decides on the following ty
 The compiler can deduce types only from the types of the parameter values that are passed to function templates.
 Although the compiler can usually deduce the types without any ambiguity, there are times when the types must be specified explicitly by the programmer.
 
-#### Explicit Type Specification
+### Explicit Type Specification
 
 Sometimes it is not possible for the compiler to deduce the template parameters.
 A situation that this can happen is when the types do not appear in the function parameter list.
@@ -218,12 +227,12 @@ Template parameters are specified in parentheses after an exclamation mark:
 getResponse!(int)("What is your age?");
 ```
 
-#### Template Instantiation
+### Template Instantiation
 
 Automatic generation of code for a specific set of template parameter values is called an instantiation of that template for that specific set of parameter values.
 For example, `to!string` and `to!int` are two different instantiations of the `to` function template.
 
-### Struct and Class templates
+## Struct and Class templates
 
 Structs and classes can be defined as templates as well, by specifying a template parameter list after their names:
 
@@ -261,7 +270,7 @@ Since structs and classes are not functions, they cannot be called with paramete
 This makes it impossible for the compiler to deduce their template parameters.
 The template parameter list must always be specified for struct and class templates.
 
-### Default Template Parameters
+## Default Template Parameters
 
 Sometimes it is cumbersome to provide template parameter types every time a template is used, especially when that type is almost always a particular type.
 For example, `getResponse()` may almost always be called for the int type in the program, and only in a few places for the double type.
