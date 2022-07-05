@@ -4,6 +4,15 @@ parent: Introduction to D
 nav_order: 5
 ---
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Associative Arrays (AA)
 
 Associative arrays represent the D language hashtable implementation and have the following syntax:

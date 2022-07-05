@@ -4,6 +4,15 @@ parent: Introduction to D
 nav_order: 8
 ---
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Functions
 
 Functions are declared the same as in C. In addition, D offers some convenience features like:

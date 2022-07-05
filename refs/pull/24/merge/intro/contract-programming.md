@@ -4,6 +4,15 @@ parent: Introduction to D
 nav_order: 10
 ---
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Contract Programming
 
 Contracts are a breakthrough technique to reduce the programming effort for large projects.
