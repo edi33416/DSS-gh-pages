@@ -147,7 +147,7 @@ As you can see, the resulting code is much more expressive and fewer lines of co
 
 ### Practice
 
-Navigate to [../../Introduction\ to\ D/practice/array-median](array-median) directory.
+Navigate to `practice/array-median` directory.
 Open and inspect the file `arrayMedian.d`.
 For this exercise, please add your solution inside the `medianElem` function.
 
