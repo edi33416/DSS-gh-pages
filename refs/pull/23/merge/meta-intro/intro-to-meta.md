@@ -1,36 +1,12 @@
 ---
-nav_order: 1
+nav_order: 2
+title: Introduction to Meta-Programming
+has_children: true
 ---
 # Introduction to Meta-Programming
 
 During this lab you will be introduced to the basic concepts of meta-programming: compile time execution and templates.
 
-## Manifest Constants
-
-Manifest constants are variables evaluated at compile time.
-They cannot change their value.
-A manifest constant is declared by using the keywork **enum**:
-
-```d
-enum i = 4;      // i is 4 of type int
-enum long l = 3; // l is 3 of type long
-```
-
-Manifest constants are not lvalues, meaning their address cannot be taken. They exist only in the memory of the compiler.
-Declaring a manifest constant that cannot be evaluated at compile time is an error:
-
-```d
-void main()
-{
-    int a = 5;
-    enum b = 5 + 2;   // ok, '5' and '2' are integer literals, known at compile time
-    enum b = a + 2;   // error: 'a' cannot be read at compile time  
-}
-```
-
-To make the above code work, **a** should be declared as an **enum**.
-
-Manifest constants can be seen as compile time variable declarations.
 
 ## Compile time function execution (CTFE)
 
@@ -436,7 +412,7 @@ Although the expression that it takes is not a logical expression, the is expres
 It is especially useful in static if conditionals and template constraints.
 The condition that it takes is always about types, which must be written in one of several syntaxes.
 
-### `1. is(T)`
+### 1. `is(T)`
 
 The expression `is(T)` Determines whether `T` is a valid type.
 
@@ -452,7 +428,7 @@ static if(is (asd))      // if asd is not a user defined type, the check will fa
 }
 ```
 
-### `2. is(T Alias)`
+### 2. `is(T Alias)`
 
 The `is(T Alias)` expression works in the same way as the previous syntax: it checks if `T` is a valid type.
 Additionally, it defines `Alias` as an alias of `T`:
@@ -469,7 +445,7 @@ else
 }
 ```
 
-### `3. is(T : OtherT)`
+### 3. `is(T : OtherT)`
 
 The `is(T : OtherT)` expression determines whether `T` can automatically be converted to `OtherT`.
 It is used to detect automatic type conversions:
@@ -509,12 +485,12 @@ void main()
 }
 ```
 
-### `4. is(T Alias : OtherT)`
+### 4. `is(T Alias : OtherT)`
 
 The `is(T Alias : OtherT)` expression works in the same way as the previous syntax.
 It checks is `T` can be implicitly converted to `OtherT` and it defines `Alias` as an alias of `T`.
 
-### `5. is(T == Specifier)`
+### 5. `is(T == Specifier)`
 
 The `is(T == Specifier)` expression determines whether `T` is the same type as `Specifier` or whether `T` matches that specifier.
 
