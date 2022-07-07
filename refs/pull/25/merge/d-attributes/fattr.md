@@ -1,3 +1,7 @@
+---
+nav_order: 3
+title: Function Attributes
+---
 # Function attributes
 
 In D, we can distinguish between three types of function attributes:
