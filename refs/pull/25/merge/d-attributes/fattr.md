@@ -292,10 +292,13 @@ void main()
 
 Similar to templates, the compiler infers if a function or delegate literal is pure. The same goes for `auto` functions.
 
-*Practice*: Navigate to `demo/pure`.
-1. Take a look at the code. Is the `mutate` function pure? 
-2. If yes, why? If no, why?
-3. Add `pure` to the function and see if the code compiles. Do you understand why it happens the way it happens?
+### Practice
+
+1. Navigate to `demo/pure`.
+
+- Take a look at the code. Is the `mutate` function pure? 
+- If yes, why? If no, why?
+- Add `pure` to the function and see if the code compiles. Do you understand why it happens the way it happens?
 
 ### `nothrow`
 
@@ -396,8 +399,10 @@ void main()
 
 As with purity, the compiler automatically infers whether a template, delegate, or anonymous function is `nothrow`.
 
-*Practice*: Navigate to `demo/nothrow/` and make that program compile _without_ removing `nothrow` or the `writeln` statement.
-*Practice*: Take a look at this [code](https://github.com/dlang/phobos/blob/master/std/algorithm/searching.d#L267) from Phobos, the D standard library. Why is this function no marked as `nothrow`?
+### Practice
+
+1. Navigate to `demo/nothrow/` and make that program compile _without_ removing `nothrow` or the `writeln` statement.
+2. Take a look at this [code](https://github.com/dlang/phobos/blob/master/std/algorithm/searching.d#L267) from Phobos, the D standard library. Why is this function no marked as `nothrow`?
 
 ### `@nogc`
 
@@ -442,7 +447,9 @@ void foo() @nogc
 
 For an extensive list of operations forbidden in `@nogc` code, check this [link](https://dlang.org/spec/function.html#nogc-functions)
 
-*Practice*: Navigate to `demo/nogc`. Add `@nogc` to the `main` function and then make the required changes to the program so as to make it compile.
+### Practice
+
+1. Navigate to `demo/nogc`. Add `@nogc` to the `main` function and then make the required changes to the program so as to make it compile.
 
 ## Code safety attributes
 
@@ -495,17 +502,19 @@ The compiler correctly highlights:
 test.d(10): Error: cannot take the address of local var in @safe function main
 ```
 
-*Practice*: Navigate to the `demo/safe` directory. Inspect the source file. Compile and run the code.
+### Practice
 
-1. What does the code do? Why is it useful to take the address of a parameter?
-2. Add the `@safe` attribute to the `main` function. What happens?
-3. Add `@safe` to the `func` and `gun` functions. Analyze the error messages.
-4. How can we get rid of the first error message?
-5. What about the second error message?
+1. Navigate to the `demo/safe` directory. Inspect the source file. Compile and run the code.
 
-*Practice*: Navigate to the `demo/code-safety` directory. Inspect the source file. Compile and run the code.
+- What does the code do? Why is it useful to take the address of a parameter?
+- Add the `@safe` attribute to the `main` function. What happens?
+- Add `@safe` to the `func` and `gun` functions. Analyze the error messages.
+- How can we get rid of the first error message?
+- What about the second error message?
 
-1. Add `@safe` to the main function and then make the code compile by solving the issues.
+2. Navigate to the `demo/code-safety` directory. Inspect the source file. Compile and run the code.
+
+- Add `@safe` to the main function and then make the code compile by solving the issues.
 
 ### `@trusted`
 
@@ -541,23 +550,27 @@ If this is the case, this function should not be marked `@trusted` under any cir
 Even if the intention is to only call it in safe ways, the compiler will not prevent unsafe usage by others.
 In our case, `safeRead` should be fine to call from any `@safe` context, so it's a great candidate for the `@trusted` attribute.
 
-*Practice*: Navigate to the `demo/trusted` directory. Inspect the source file. Compile and run the code.
+### Practice
 
-1. Is this code safe? Why?
-2. Apply `@safe` to the main function. What happens? Why?
-3. Move the `read` line in a new function, `safeRead`, that will be marked as `@trusted`.
+1. Navigate to the `demo/trusted` directory. Inspect the source file. Compile and run the code.
 
-*Practice*: Navigate to the `demo/template-inference` directory. Inspect the source file. Compile and run the code.
+- Is this code safe? Why?
+- Apply `@safe` to the main function. What happens? Why?
+- Move the `read` line in a new function, `safeRead`, that will be marked as `@trusted`.
 
-1. Add the `@safe` attribute to the main function.
-2. How do you explain the result? 
-3. Why isn't the compiler complaining for the second invocation of func?
+2. Navigate to the `demo/template-inference` directory. Inspect the source file. Compile and run the code.
+
+- Add the `@safe` attribute to the main function.
+- How do you explain the result? 
+- Why isn't the compiler complaining for the second invocation of func?
 
 ### `@system`
 
 `@system` is the default safety attribute for functions and it implies that no automatic safety checks are performed.
 
-*Practice*: Navigate to `demo/all-attributes`. Edit the code so as to compile.
+### Practice
+
+1. Navigate to `demo/all-attributes`. Edit the code so as to compile.
 
 ## Acknowledgement
 
