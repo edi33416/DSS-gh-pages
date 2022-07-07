@@ -2,7 +2,16 @@
 nav_order: 3
 title: Function Attributes
 ---
-# Function attributes
+# Function Attributes
+
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 In D, we can distinguish between three types of function attributes:
 
