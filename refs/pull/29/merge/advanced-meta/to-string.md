@@ -1,6 +1,7 @@
 ---
 title: Call toString when Defined 
 parent: Improvements
+grand_parent: Advanced Meta-Programming
 nav_order: 1
 ---
 # Call `toString` when Defined

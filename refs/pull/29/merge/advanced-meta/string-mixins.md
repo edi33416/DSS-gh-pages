@@ -1,6 +1,7 @@
 ---
 title: String Mixins 
 parent: Improvements
+grand_parent: Advanced Meta-Programming
 nav_order: 2
 ---
 # String Mixins
