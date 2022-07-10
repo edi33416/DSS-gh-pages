@@ -1,5 +1,5 @@
 ---
-title: "Recap: CTFE"
+title: 'Recap: CTFE'
 parent: Advanced Meta-Programming
 nav_order: 2
 ---

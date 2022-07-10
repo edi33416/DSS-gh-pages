@@ -1,5 +1,5 @@
 ---
-title: 'Recap: Log Simple Types'
+title: Log Simple Types
 parent: Advanced Meta-Programming
 nav_order: 3
 ---
