@@ -2,7 +2,6 @@
 title: Improvements
 parent: Advanced Meta-Programming
 nav_order: 9
-has_children: true
 ---
 # Improvements
 
