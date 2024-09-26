@@ -298,16 +298,16 @@ struct Rectangle
     size_t length, width;
     int id;
 
-    size_t area() { return length*width; }
-    size_t perimeter() { return 2*(length + width); }
+    size_t area() { return length * width; }
+    size_t perimeter() { return 2 * (length + width); }
     size_t isSquare() { return length == width; }
     void setId(int id) { this.id = id; }
 }
 ```
 
-# Classes
+### Classes
 
-In D, classes are very similar with java classes:
+In D, classes are very similar with Java classes:
 
 1. Classes can implement any number of interfaces
 1. Classes can inherit a single class
@@ -319,4 +319,81 @@ The fundamental difference between **structs** and **classes** is that the forme
 This means that whenever a struct is passed as an argument to an lvalue function parameter, the function will operate on a copy of the object.
 When a class is passed as an argument to an lvalue function parameter, the function will receive a reference to the object.
 
-Both **structs** and **classes** are covered more in depth in [Advanced Structs and Classes](./structs-classes/asc.md).
+Both **structs** and **classes** are covered more in depth in [Advanced Structs and Classes](../structs-classes/asc.md).
+
+### Functions
+
+Functions are declared the same as in C. In addition, D offers some convenience features like:
+
+#### Uniform function call syntax (UFCS)
+
+UFCS allows any call to a free function `fun(a)` to be written as a member function call: `a.fun()`
+
+```d
+import std.algorithm : group;
+import std.range : chain, dropOne, front, retro;
+
+//retro(chain([1, 2], [3, 4]));
+//front(dropOne(group([1, 1, 2, 2, 2])));
+
+[1, 2].chain([3, 4]).retro; // 4, 3, 2, 1
+[1, 1, 2, 2, 2].group.dropOne.front; // (2, 3)
+
+```
+
+#### Overloading:
+
+```d
+import std.stdio : writefln;
+
+void add(int a, int b)
+{
+    writefln("sum = %d", a + b);
+}
+
+void add(double a, double b)
+{
+    writefln("sum = %f", a + b);
+}
+
+void main()
+{
+    add(10, 2);
+    add(5.3, 6.2);
+}
+```
+
+Function overloading is a feature of object-oriented programming where two or more functions can have the same name but different parameters.
+Overloading is done based on the **type of parameters**, not on the **return type**.
+
+#### Default parameters:
+
+```d
+void fun(int a, int b=8) {}
+
+void main()
+{
+    fun(7);    // calls fun(7, 8)
+    fun(2, 3); // calls fun(2, 3)
+}
+```
+
+A function may have any number of default parameters. If a default parameter is given, all following parameters must also have default values.
+
+#### Auto return type:
+
+```d
+auto fun()
+{
+    return 7;
+}
+
+void main()
+{
+    int b = fun();
+    auto c = fun();   // works for variables also
+}
+```
+
+Auto functions have their return type inferred based on the type of the return statements.
+Auto can be also used to infer the type of a variable declaration.
